@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Catálogo · Mundo Chiikawa{% endblock %}
+
+{% block contenido %}
+<section aria-labelledby="catalogo">
+    <h2 id="catalogo">Catálogo de productos</h2>
+    <div class="grid-productos">
+        {% for producto in productos %}
+            {% include 'includes/producto.html' %}
+        {% empty %}
+            <p style="text-align: center; width: 100%; color: #fff;">Aún no hay productos en el catálogo.</p>
+        {% endfor %}
+    </div>
+    <p class="acciones"><a class="btn-chiikawa" href="{% url 'crear_producto' %}">Añadir producto</a></p>
+</section>
+{% endblock %}

@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+db.sqlite3
+.venv/
+# mensajes de contacto guardados en JSON (datos personales)
+data/contactos.json

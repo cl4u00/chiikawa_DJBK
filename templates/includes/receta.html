@@ -1,0 +1,29 @@
+{% load static %}
+<article>
+    <h3>{{ receta.nombre }}</h3>
+    <div class="cuerpo-receta">
+        <img src="{% static receta.imagen %}" alt="{{ receta.alt }}" />
+        <aside>
+            <h4>Ingredientes</h4>
+            {% for grupo in receta.ingredientes %}
+                {% if grupo.titulo %}
+                    <p><strong>{{ grupo.titulo }}</strong>{% if grupo.nota %}<br />
+                    <small><em>{{ grupo.nota }}</em></small>{% endif %}</p>
+                {% endif %}
+                <ul>
+                    {% for item in grupo.items %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </aside>
+    </div>
+    <div class="preparacion-receta">
+        <h4>Preparación</h4>
+        <ol>
+            {% for paso in receta.preparacion %}
+                <li>{% if paso.titulo %}<strong>{{ paso.titulo }}:</strong> {% endif %}{{ paso.texto|safe }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+</article>

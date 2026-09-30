@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Registro · Mundo Chiikawa{% endblock %}
+
+{% block contenido %}
+<section class="tarjeta-form" aria-labelledby="registro">
+    <h2 id="registro">Crear cuenta</h2>
+    <form method="post" novalidate>
+        {% csrf_token %}
+        {% include 'includes/campos.html' %}
+        <button type="submit" class="btn-chiikawa">Registrarme</button>
+    </form>
+    <p class="enlace-extra">¿Ya tienes cuenta? <a href="{% url 'login' %}">Inicia sesión</a></p>
+</section>
+{% endblock %}

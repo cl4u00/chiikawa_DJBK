@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Iniciar sesión · Mundo Chiikawa{% endblock %}
+
+{% block contenido %}
+<section class="tarjeta-form" aria-labelledby="login">
+    <h2 id="login">Iniciar sesión</h2>
+    <form method="post" novalidate>
+        {% csrf_token %}
+        {% include 'includes/campos.html' %}
+        <input type="hidden" name="next" value="{{ next }}">
+        <button type="submit" class="btn-chiikawa">Entrar</button>
+    </form>
+    <p class="enlace-extra">¿No tienes cuenta? <a href="{% url 'registro' %}">Regístrate</a></p>
+</section>
+{% endblock %}

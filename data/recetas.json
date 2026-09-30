@@ -1,0 +1,482 @@
+[
+  {
+    "nombre": "Pot-au-feu",
+    "tipo": "s",
+    "imagen": "images/recetas/sopa.png",
+    "alt": "Imagen de Pot-au-feu",
+    "orden": 1,
+    "orden_carrusel": 4,
+    "nueva": false,
+    "ingredientes": [
+      {
+        "items": [
+          "1 kg de carne de vacuno para cocido",
+          "2 a 4 huesos de tuétano",
+          "4 zanahorias grandes.",
+          "2 puerros (solo la parte blanca y verde claro).",
+          "2 nabos.",
+          "4 papas medianas.",
+          "2 ramas de apio.",
+          "1 cebolla blanca.",
+          "2 clavos de olor (incrustados en la cebolla).",
+          "1 bouquet garni (tomillo, laurel y perejil atados).",
+          "Sal gruesa y pimienta en grano."
+        ]
+      }
+    ],
+    "preparacion": [
+      {
+        "texto": "Sellar y Limpiar: Coloca la carne en una olla grande y cúbrela con agua fría. Lleva a ebullición y deja hervir por 2-3 minutos. Escurre y enjuaga la carne y la olla; esto ayuda a que el caldo quede transparente y libre de impurezas."
+      },
+      {
+        "texto": "El Caldo: Regresa la carne a la olla limpia. Cubre con unos 3 litros de agua fría. Añade la cebolla (con los clavos), el apio, el bouquet garni, una pizca de sal gruesa y los granos de pimienta."
+      },
+      {
+        "texto": "Cocción Lenta: Cocina a fuego muy bajo, apenas burbujeando, durante 2 horas. Es vital ir retirando la espuma que suba a la superficie con una espumadera."
+      },
+      {
+        "texto": "Incorporar Vegetales: Añade las zanahorias, los nabos y los puerros. Cocina por 40 minutos más."
+      },
+      {
+        "texto": "Las Papas: Tradicionalmente, las papas se cuecen aparte en un poco del caldo del pot-au-feu para evitar que el almidón enturbie la sopa principal. Cocínalas hasta que estén tiernas (unos 20 minutos)."
+      },
+      {
+        "texto": "El Toque Final: Si usas huesos de tuétano, añádelos a la olla principal en los últimos 15 minutos de cocción."
+      }
+    ]
+  },
+  {
+    "nombre": "Pan de Pizza (Estilo Cueva)",
+    "tipo": "s",
+    "imagen": "images/recetas/pan_pizza.png",
+    "alt": "Imagen de Pan de Pizza",
+    "orden": 2,
+    "orden_carrusel": 2,
+    "nueva": false,
+    "ingredientes": [
+      {
+        "titulo": "La Masa",
+        "items": [
+          "500 g de harina de fuerza (tipo 00).",
+          "300 ml de agua tibia.",
+          "7 g de levadura seca de panadería (o 20 g de levadura fresca).",
+          "2 cucharadas de aceite de oliva virgen extra.",
+          "1 pizca de sal."
+        ]
+      },
+      {
+        "titulo": "El Relleno (Estilo Clásico)",
+        "items": [
+          "200 g de queso mozzarella rallado (o en cubos pequeños).",
+          "100 g de pepperoni o jamón picado.",
+          "100 ml de salsa de tomate espesa (tipo passata).",
+          "1 pimiento verde pequeño picado finamente."
+        ]
+      },
+      {
+        "titulo": "Para el Barnizado y Aroma",
+        "items": [
+          "1 huevo batido (para dorar).",
+          "1 cucharadita de orégano seco.",
+          "1 diente de ajo picado muy fino (mezclado con un poco de aceite)."
+        ]
+      }
+    ],
+    "preparacion": [
+      {
+        "titulo": "Activar la Levadura",
+        "texto": "En un bol pequeño, mezcla el agua tibia con la levadura. Deja reposar por 5-10 minutos hasta que veas que empieza a burbujear."
+      },
+      {
+        "titulo": "Amasado",
+        "texto": "En un bol grande, pon la harina y la sal. Haz un hueco en el centro y añade la mezcla de levadura y el aceite de oliva. Amasa durante unos 10 minutos a mano (o 5 con robot) hasta obtener una masa elástica que no se pegue a los dedos."
+      },
+      {
+        "titulo": "Primer Leudado",
+        "texto": "Coloca la masa en un bol aceitado, cúbrela con un paño húmedo y déjala reposar en un lugar cálido durante 1 hora o hasta que duplique su tamaño."
+      },
+      {
+        "titulo": "Formado y Relleno",
+        "texto": "Desgasifica la masa presionándola suavemente. Estírala sobre una superficie enharinada formando un gran rectángulo. Extiende la salsa de tomate (sin llegar a los bordes), añade el queso, el pepperoni y el pimiento."
+      },
+      {
+        "titulo": "El Cierre",
+        "texto": "Enrolla la masa con cuidado como si fuera un brazo de reina (o un cilindro) y sella bien los bordes con un poco de agua para que no se escape el relleno."
+      },
+      {
+        "titulo": "Segundo Leudado y Horneado",
+        "texto": "Coloca el pan en una bandeja de horno. Deja reposar 20 minutos más. Mientras tanto, precalienta el horno a 200°C."
+      },
+      {
+        "titulo": "Cocción",
+        "texto": "Pincela con el huevo batido, añade el ajo picado y el orégano por encima. Hornea durante 25-30 minutos hasta que esté bien dorado y suene hueco al golpearlo por debajo."
+      }
+    ]
+  },
+  {
+    "nombre": "Nigiri Sushi Tradicional",
+    "tipo": "s",
+    "imagen": "images/recetas/sushi.png",
+    "alt": "Imagen de Nigiri Sushi",
+    "orden": 3,
+    "orden_carrusel": 1,
+    "nueva": false,
+    "ingredientes": [
+      {
+        "titulo": "El Arroz (Shari)",
+        "nota": "Es el alma del sushi clásico. Debe estar a temperatura corporal al servir.",
+        "items": [
+          "500 g de arroz de grano corto (tipo Japonica).",
+          "600 ml de agua.",
+          "Aderezo: 4 cucharadas de vinagre de arroz, 1 de azúcar y 1 pizca de sal (el estilo de Tokio lleva menos azúcar y más sal)."
+        ]
+      },
+      {
+        "titulo": "El Pescado (Neta)",
+        "items": [
+          "400 g de lomo de Salmón o Atún rojo (grado sashimi, congelado a -20°C por seguridad).",
+          "Opcional: Camarones cocidos y abiertos en mariposa o láminas de pulpo."
+        ]
+      },
+      {
+        "titulo": "Complementos",
+        "items": [
+          "Wasabi auténtico (o en pasta de buena calidad).",
+          "Salsa de soja de fermentación natural.",
+          "Gari (jengibre encurtido) para limpiar el paladar entre piezas."
+        ]
+      }
+    ],
+    "preparacion": [
+      {
+        "titulo": "Preparar el Arroz - Lavado",
+        "texto": "Lava el arroz frotándolo suavemente hasta que el agua salga cristalina."
+      },
+      {
+        "titulo": "Preparar el Arroz - Cocción",
+        "texto": "Cocina el arroz con el agua (relación 1:1.2). Una vez listo, deja reposar 10 minutos tapado."
+      },
+      {
+        "titulo": "Preparar el Arroz - Vinagrado",
+        "texto": "Pasa el arroz a un recipiente de madera (hangiri) y añade el aderezo con movimientos de corte. Abanica mientras mezclas para que el grano quede brillante y no se apelmace."
+      },
+      {
+        "titulo": "El Corte del Pescado (Saku)",
+        "texto": "Toma el lomo de pescado y corta láminas de unos 6 cm de largo, 3 cm de ancho y 0.5 cm de grosor. El corte debe ser un solo movimiento fluido hacia atrás, usando toda la longitud del cuchillo para no \"aserrar\" la carne."
+      },
+      {
+        "titulo": "Formado del Nigiri - Humedecer",
+        "texto": "Ten un bol con agua y un poco de vinagre para humedecerte las manos constantemente."
+      },
+      {
+        "titulo": "Formado del Nigiri - La Base",
+        "texto": "Toma una pequeña cantidad de arroz (unos 15-20 g) con la mano derecha y forma un óvalo firme pero aireado. No lo aprietes demasiado; el arroz debe deshacerse en la boca."
+      },
+      {
+        "titulo": "Formado del Nigiri - El Armado",
+        "texto": "Toma una lámina de pescado con la mano izquierda, pon un puntito de wasabi en el centro del pescado y coloca el óvalo de arroz encima."
+      },
+      {
+        "titulo": "Formado del Nigiri - Presión",
+        "texto": "Usa los dedos índice y medio para presionar suavemente el arroz contra el pescado, dándole una forma arqueada elegante."
+      }
+    ]
+  },
+  {
+    "nombre": "Spaghetti Medusa (Pasta con Salchichas)",
+    "tipo": "s",
+    "imagen": "images/recetas/pasta.png",
+    "alt": "Imagen de Hachiware cocinando pasta",
+    "orden": 4,
+    "orden_carrusel": 8,
+    "nueva": false,
+    "ingredientes": [
+      {
+        "titulo": "La Pasta",
+        "items": [
+          "400 g de spaghetti.",
+          "4 litros de agua para la cocción.",
+          "Sal a gusto."
+        ]
+      },
+      {
+        "titulo": "El Acompañamiento",
+        "items": [
+          "6 a 8 salchichas de buena calidad (pueden ser de pavo o cerdo).",
+          "2 tazas de salsa de tomate (pomodoro o passata).",
+          "1 cebolla pequeña picada fina y 1 diente de ajo.",
+          "1 cucharadita de orégano seco y aceite."
+        ]
+      },
+      {
+        "titulo": "Toques Finales",
+        "items": [
+          "Queso parmesano rallado.",
+          "Hojas de albahaca fresca o perejil para decorar."
+        ]
+      }
+    ],
+    "preparacion": [
+      {
+        "titulo": "Corte Divertido",
+        "texto": "Corta las salchichas en rodajas de unos 2 cm. <em>Tip de Hachiware:</em> ¡Atraviesa los trozos con 5 o 6 spaghetti crudos para que parezcan medusas al cocerse!"
+      },
+      {
+        "titulo": "El Sofrito",
+        "texto": "En una sartén, calienta aceite y sofríe la cebolla y el ajo hasta que estén transparentes. Añade las salchichas y dóralas un poco."
+      },
+      {
+        "titulo": "La Salsa",
+        "texto": "Vierte la salsa de tomate y el orégano. Cocina a fuego bajo por 10 minutos hasta que espese y tome sabor."
+      },
+      {
+        "titulo": "Cocer la Pasta",
+        "texto": "Hierve los spaghetti en agua con sal hasta que estén al dente. <strong>¡No olvides guardar media taza del agua de cocción antes de colar!</strong>"
+      },
+      {
+        "titulo": "Unión Final",
+        "texto": "Escurre la pasta y échala a la sartén. Añade el agua que guardaste; esto hará que la salsa quede cremosa y se pegue bien a los fideos."
+      }
+    ]
+  },
+  {
+    "nombre": "Dorayaki (Pancakes con Pasta de Frijol)",
+    "tipo": "p",
+    "imagen": "images/recetas/relleno.png",
+    "alt": "Imagen de Dorayakis tiernos",
+    "orden": 5,
+    "orden_carrusel": 7,
+    "nueva": false,
+    "ingredientes": [
+      {
+        "titulo": "La Masa (Pancakes de Miel)",
+        "items": [
+          "2 huevos grandes.",
+          "100 g de azúcar flor (o azúcar granulada fina).",
+          "1 cucharada de miel de abeja.",
+          "160 g de harina sin polvos de hornear.",
+          "1 cucharadita de polvos de hornear (o bicarbonato de sodio).",
+          "2 a 3 cucharadas de agua (para ajustar la densidad).",
+          "Aceite de maravilla (solo para engrasar apenas la sartén)."
+        ]
+      },
+      {
+        "titulo": "El Relleno (Pasta de Frijol Verde)",
+        "items": [
+          "200 g de frijoles verdes (Mung) pelados.",
+          "100 g de azúcar.",
+          "1 pizca de sal.",
+          "Agua (la necesaria para el remojo y la cocción)."
+        ]
+      }
+    ],
+    "preparacion": [
+      {
+        "titulo": "El Relleno - Remojo",
+        "texto": "Deja los frijoles verdes en agua fría durante al menos 4 horas (o toda la noche)."
+      },
+      {
+        "titulo": "El Relleno - Cocción",
+        "texto": "Enjuaga y cocina los frijoles en una olla con abundante agua hasta que estén muy blandos (aprox. 30-40 minutos)."
+      },
+      {
+        "titulo": "El Relleno - Procesado",
+        "texto": "Escurre el agua sobrante y tritura los frijoles calientes con una procesadora o pasapuré hasta que no queden grumos."
+      },
+      {
+        "titulo": "El Relleno - Endulzado",
+        "texto": "Pasa la pasta a una sartén limpia a fuego medio-bajo. Añade el azúcar y la pizca de sal. Revuelve constantemente hasta que el azúcar se disuelva y la pasta espese lo suficiente como para mantener su forma. Deja enfriar."
+      },
+      {
+        "titulo": "La Masa - Mezcla Base",
+        "texto": "En un bol, bate los huevos con el azúcar y la miel hasta que la mezcla esté espumosa y un poco más clara."
+      },
+      {
+        "titulo": "La Masa - Tamizado",
+        "texto": "Añade la harina y los polvos de hornear tamizados sobre la mezcla de huevo. Mezcla suavemente con un batidor de mano."
+      },
+      {
+        "titulo": "La Masa - Reposo",
+        "texto": "Deja reposar la masa en el refrigerador durante 15 minutos. Esto ayuda a que el gluten se relaje y la superficie quede lisa."
+      },
+      {
+        "titulo": "La Masa - Ajuste",
+        "texto": "Saca la masa y añade las cucharadas de agua una a una. La consistencia debe ser fluida pero espesa, como una crema."
+      },
+      {
+        "titulo": "Horneado - Temperatura",
+        "texto": "Calienta una sartén antiadherente a fuego muy bajo. Pasa una servilleta con una gota de aceite y luego límpiala (queremos una superficie lisa, sin charcos de aceite)."
+      },
+      {
+        "titulo": "Horneado - Formado",
+        "texto": "Vierte un poco de masa para formar círculos de unos 8-10 cm."
+      },
+      {
+        "titulo": "Horneado - Burbujas",
+        "texto": "Cuando veas que aparecen burbujas pequeñas en la superficie y los bordes se vean secos (aprox. 2 minutos), dalo vuelta con cuidado. Cocina por 30-40 segundos más por el otro lado."
+      },
+      {
+        "titulo": "Horneado - Enfriado",
+        "texto": "Deja las tapitas bajo un paño húmedo para que no se sequen y mantengan su elasticidad. ¡Luego solo rellénalas con la pasta y disfruta!"
+      }
+    ]
+  },
+  {
+    "nombre": "Pudding de Vainilla",
+    "tipo": "p",
+    "imagen": "images/recetas/puding.png",
+    "alt": "Imagen de Pudding de Vainilla",
+    "orden": 6,
+    "orden_carrusel": 3,
+    "nueva": false,
+    "ingredientes": [
+      {
+        "titulo": "La Base Cremosa",
+        "items": [
+          "500 ml de leche entera (la leche entera da mejor consistencia).",
+          "100 g de azúcar blanca.",
+          "30 g de maicena (almidón de maíz) para espesar.",
+          "3 yemas de huevo grandes.",
+          "1 pizca de sal."
+        ]
+      },
+      {
+        "titulo": "Aromas y Acabado",
+        "items": [
+          "1 cucharadita de extracto de vainilla potente.",
+          "30 g de mantequilla sin sal (fría y en cubos)."
+        ]
+      }
+    ],
+    "preparacion": [
+      {
+        "titulo": "Mezcla Seca y Yemas",
+        "texto": "En un bol mediano, mezcla el azúcar, la maicena y la pizca de sal. Añade las yemas de huevo y un chorrito de la leche fría (unos 50 ml). Bate bien con un batidor de mano hasta que no queden grumos y la mezcla esté pálida."
+      },
+      {
+        "titulo": "Calentar la Leche",
+        "texto": "En una olla a fuego medio, calienta el resto de la leche hasta que empiece a humear y veas burbujitas en los bordes (pero que no llegue a hervir a borbotones)."
+      },
+      {
+        "titulo": "Temperado (Crucial)",
+        "texto": "Vierte un poco de la leche caliente sobre la mezcla de yemas muy lentamente, revolviendo sin parar. Esto sube la temperatura de los huevos suavemente para que no se cocinen y parezcan revueltos."
+      },
+      {
+        "titulo": "Espesado",
+        "texto": "Regresa toda la mezcla a la olla. Cocina a fuego medio-bajo, revolviendo constantemente con una cuchara de madera o batidor, hasta que la mezcla espese y empiece a burbujear suavemente (unos 5-7 minutos)."
+      },
+      {
+        "titulo": "El Toque Final",
+        "texto": "Retira del fuego. Añade la mantequilla fría y la vainilla. Revuelve hasta que la mantequilla se derrita por completo; esto le dará un brillo espejo y una textura sedosa."
+      },
+      {
+        "titulo": "Enfriado",
+        "texto": "Vierte el pudding en pocillos individuales."
+      },
+      {
+        "titulo": "Tip Pro",
+        "texto": "Para que no se le forme esa \"capita\" o piel dura arriba, coloca un trozo de papel film (alusa) tocando directamente la superficie del pudding mientras se enfría."
+      }
+    ]
+  },
+  {
+    "nombre": "Soufflé Pancakes (Panqueques de Nube)",
+    "tipo": "p",
+    "imagen": "images/recetas/pancakes.png",
+    "alt": "Imagen de panqueques esponjosos",
+    "orden": 7,
+    "orden_carrusel": 5,
+    "nueva": false,
+    "ingredientes": [
+      {
+        "titulo": "La Base de Yema",
+        "items": [
+          "4 yemas de huevo grandes.",
+          "40 ml de leche entera.",
+          "1 cucharadita de extracto de vainilla.",
+          "60 g de harina sin polvos (tamizada) y ½ cdta de polvos de hornear."
+        ]
+      },
+      {
+        "titulo": "El Merengue (La Estructura)",
+        "items": [
+          "4 claras de huevo (frías).",
+          "50 g de azúcar granulada fina.",
+          "1 cucharadita de jugo de limón (para estabilizar)."
+        ]
+      }
+    ],
+    "preparacion": [
+      {
+        "titulo": "Mezcla de Yemas",
+        "texto": "Bate las yemas con la leche y la vainilla. Agrega la harina y los polvos tamizados. Mezcla hasta que esté suave y reserva."
+      },
+      {
+        "titulo": "Hacer el Merengue",
+        "texto": "Bate las claras con el limón. Agrega el azúcar en tres partes hasta obtener picos firmes y brillantes."
+      },
+      {
+        "titulo": "Integración Delicada",
+        "texto": "Incorpora un tercio del merengue a las yemas. Luego, añade el resto con movimientos envolventes muy suaves para no perder el aire."
+      },
+      {
+        "titulo": "Cocción con Vapor",
+        "texto": "En un sartén antiadherente a fuego muy bajo, pon 2 o 3 cucharadas de mezcla una sobre otra. Añade una gota de agua al sartén (lejos de la mezcla) y tapa de inmediato."
+      },
+      {
+        "titulo": "El Giro",
+        "texto": "Cocina 5-6 min por lado. Voltea con mucho cuidado, añade otro poquito de agua, tapa y cocina por 5 min más. ¡Sírvelos de inmediato!"
+      }
+    ]
+  },
+  {
+    "nombre": "Canelés de Burdeos (El Dulce Paciente)",
+    "tipo": "p",
+    "imagen": "images/recetas/canele.png",
+    "alt": "Imagen de preparación de postres",
+    "orden": 8,
+    "orden_carrusel": 6,
+    "nueva": false,
+    "ingredientes": [
+      {
+        "titulo": "La Base Líquida",
+        "items": [
+          "500 ml de leche entera.",
+          "50 g de mantequilla sin sal.",
+          "1 vaina de vainilla (o 2 cdtas de extracto)."
+        ]
+      },
+      {
+        "titulo": "Los Secos y Unión",
+        "items": [
+          "250 g de azúcar flor.",
+          "125 g de harina sin polvos.",
+          "2 huevos grandes + 2 yemas adicionales.",
+          "50 ml de ron oscuro y una pizca de sal."
+        ]
+      }
+    ],
+    "preparacion": [
+      {
+        "titulo": "Infusión de Leche",
+        "texto": "Calienta la leche con la mantequilla y la vainilla hasta que hierva suavemente. Retira del fuego y deja entibiar."
+      },
+      {
+        "titulo": "Mezcla de Secos y Huevos",
+        "texto": "Tamiza la harina, el azúcar y la sal. Añade los huevos y yemas, integrando con un batidor sin incorporar aire."
+      },
+      {
+        "titulo": "Unir Líquidos",
+        "texto": "Vierte la leche tibia sobre la mezcla poco a poco, revolviendo suavemente. Finalmente, añade el ron."
+      },
+      {
+        "titulo": "El Reposo Sagrado",
+        "texto": "Tapa la mezcla con film y déjala en el refrigerador por <strong>mínimo 24 horas</strong>. ¡Este es el secreto para el sabor intenso!"
+      },
+      {
+        "titulo": "Horneado Doble",
+        "texto": "Precalienta a 220°C. Llena los moldes engrasados (dejando 5mm libres). Hornea 15 min a 220°C, luego baja a 180°C y cocina por 45-50 min más hasta que estén muy oscuros por fuera."
+      }
+    ]
+  }
+]

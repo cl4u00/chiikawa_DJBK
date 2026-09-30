@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Contacto · Mundo Chiikawa{% endblock %}
+
+{% block contenido %}
+<section class="tarjeta-form" aria-labelledby="contacto">
+    <h2 id="contacto">Escríbenos</h2>
+    <form method="post" novalidate>
+        {% csrf_token %}
+        {% include 'includes/campos.html' %}
+        <button type="submit" class="btn-chiikawa">Enviar mensaje</button>
+    </form>
+</section>
+{% endblock %}

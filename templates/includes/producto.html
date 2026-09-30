@@ -1,0 +1,9 @@
+<div class="tarjeta-producto">
+    <span class="etiqueta">{{ producto.categoria }}</span>
+    <h4>{{ producto.nombre }}</h4>
+    <p class="personaje">{{ producto.personaje|default:"Sin personaje" }}</p>
+    {% if producto.descripcion %}<p>{{ producto.descripcion }}</p>{% endif %}
+    <p>{{ producto.get_tamano_display }}</p>
+    <p class="precio">${{ producto.precio|floatformat:"0g" }}</p>
+    <small>SKU: {{ producto.sku }}</small>
+</div>

@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block titulo %}Mundo Chiikawa{% endblock %}</title>
+
+
+    <link rel="icon" type="image/webp" href="{% static 'images/iconos/iconhachiware.webp' %}" />
+
+
+    <link rel="stylesheet" href="{% static 'css/chiikawa.css' %}">
+    <link rel="stylesheet" href="{% static 'css/paginas.css' %}">
+    {% block extra_head %}{% endblock %}
+    <script src="{% static 'js/menu.js' %}" defer></script>
+</head>
+<body>
+    <div class="pagina-chiikawa">
+        <div class="burbuja burbuja-1"></div>
+        <div class="burbuja burbuja-2"></div>
+        <div class="burbuja burbuja-3"></div>
+        <div class="burbuja burbuja-4"></div>
+        <div class="burbuja burbuja-5"></div>
+
+        <header id="inicio" style="text-align: center;">
+            <div class="logo" style="margin-top: 20px;">
+                <img src="{% static 'images/iconos/iconhachiware.webp' %}" alt="Logo Chiikawa" style="width: 100px;" />
+                <h1>Mundo Chiikawa</h1>
+            </div>
+
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="{% url 'inicio' %}#introduccion">Historia</a></li>
+                    <li><a href="{% url 'inicio' %}#recetas-saladas">Recetas</a></li>
+                    <li><a href="{% url 'inicio' %}#postres">Postres</a></li>
+                    <li><a href="{% url 'catalogo' %}">Catálogo</a></li>
+                    <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                    <li>
+                        <button style="background: none; border: none; color: #4980f8; font-weight: bold; cursor: pointer; font-size: 16px;">
+                            🛒 Carrito
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="user-menu-container">
+                <button class="hamburger-btn" type="button" aria-label="Menú de usuario" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="dropdown-menu">
+                    <div id="auth-links" style="display: flex; flex-direction: column;">
+                        {% if user.is_authenticated %}
+                            <span class="welcome-text">Hola, {{ user.username }}</span>
+                            <form method="post" action="{% url 'logout' %}">
+                                {% csrf_token %}
+                                <button type="submit">Cerrar Sesión</button>
+                            </form>
+                        {% else %}
+                            <a href="{% url 'login' %}">Iniciar Sesión</a>
+                            <a href="{% url 'registro' %}">Registrarse</a>
+                        {% endif %}
+                        <a href="{% url 'crear_producto' %}" class="btn btn-primary">Añadir Producto</a>
+                    </div>
+                </div>
+            </div>
+
+            {% block carrusel %}{% endblock %}
+        </header>
+
+        <main>
+            {% if messages %}
+                <div class="mensajes">
+                    {% for mensaje in messages %}
+                        <p class="mensaje mensaje-{{ mensaje.tags }}">{{ mensaje }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            {% block contenido %}{% endblock %}
+        </main>
+
+        <footer class="pie-pagina-oficial" id="redes-footer">
+            <img src="{% static 'images/iconos/icon2.png' %}" alt="Hachiware asomándose" class="hachiware-footer" />
+            <div class="footer-columnas">
+                <div class="columna-izq">
+                    <h2 class="logo-footer">COCiNA CON HACHiWARE</h2>
+                    <div class="redes-sociales">
+                        <a href="#">📷 Instagram oficial</a>
+                        <a href="#">📺 Canal de YouTube</a>
+                        <a href="#">🎵 TikTok de recetas</a>
+                    </div>
+                </div>
+                <div class="columna-cen">
+                    <a href="{% url 'inicio' %}#introduccion">Inicio</a>
+                    <a href="{% url 'inicio' %}#recetas-saladas">Recetas Saladas</a>
+                    <a href="{% url 'inicio' %}#postres">Postres</a>
+                    <a href="{% url 'catalogo' %}">Catálogo</a>
+                </div>
+                <div class="columna-der">
+                    <strong class="titulo-der">Mundo Chiikawa</strong>
+                    <a href="{% url 'contacto' %}" style="background: white; color: #4980f8; padding: 10px; border-radius: 15px; text-align: center; margin-bottom: 10px; text-decoration: none; font-weight: bold; display: block;">
+                        ¡Escríbenos aquí!
+                    </a>
+                    <a href="#">Sobre el proyecto</a>
+                    <a href="#">Términos de uso</a>
+                    <a href="#">Privacidad</a>
+                    <p class="creditos">Desarrollado por Kai ✨</p>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#inicio" class="boton-subir" title="Volver al inicio">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="icono-flecha">
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        </a>
+    </div>
+</body>
+</html>
