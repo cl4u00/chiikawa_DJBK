@@ -1,27 +1,35 @@
 from django.contrib import messages
+from django.http import Http404
 from django.shortcuts import render, redirect
 from tiendaApp import datos
 from tiendaApp.forms import ContactoForm, ProductoForm
 from tiendaApp.models import Producto
 
-# Tu vista de inicio que ya tenías (ahora envía recetas y carrusel a la plantilla)
+# Vista de inicio: envía las recetas (saladas y dulces) y el carrusel a la plantilla
 def inicio(request):
     recetas = datos.obtener_recetas()
     carrusel = datos.obtener_carrusel(recetas)
     contexto = {
-        'recetas_saladas': [r for r in recetas if r['tipo'] == 's' and not r.get('nueva')],
-        'postres': [r for r in recetas if r['tipo'] == 'p' and not r.get('nueva')],
-        'recetas_nuevas': [r for r in recetas if r.get('nueva')],
+        # una receta nueva aparece en su categoría (con la etiqueta "Nueva")
+        'recetas_saladas': [r for r in recetas if r['tipo'] == 's'],
+        'postres': [r for r in recetas if r['tipo'] == 'p'],
         # la lista se repite dos veces para el efecto infinito del carrusel
         'carrusel': carrusel * 2,
         'total_carrusel': len(carrusel),
     }
     return render(request, 'tiendaApp/inicio.html', contexto)
 
-# --- Catálogo de productos (ciclo for sobre la base de datos) ---
-def catalogo(request):
+# --- Receta completa ---
+def receta_detalle(request, slug):
+    receta = datos.obtener_receta(slug)
+    if receta is None:
+        raise Http404('Receta no encontrada')
+    return render(request, 'tiendaApp/receta_detalle.html', {'receta': receta})
+
+# --- Tienda de productos (ciclo for sobre la base de datos) ---
+def tienda(request):
     productos = Producto.objects.select_related('categoria', 'personaje')
-    return render(request, 'tiendaApp/catalogo.html', {'productos': productos})
+    return render(request, 'tiendaApp/tienda.html', {'productos': productos})
 
 # --- Formulario de contacto ---
 def contacto(request):

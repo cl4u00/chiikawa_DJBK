@@ -14,37 +14,32 @@
 {% endblock %}
 
 {% block contenido %}
-            <section aria-labelledby="introduccion">
+            <section class="recuadro" aria-labelledby="recetas-saladas">
+                <h2 id="recetas-saladas">Recetas saladas</h2>
+                <div class="grid-recetas">
+                    {% for receta in recetas_saladas %}
+                        {% include 'includes/receta_tarjeta.html' %}
+                    {% empty %}
+                        <p class="vacio">Aún no hay recetas saladas.</p>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <section class="recuadro recuadro-rosa" aria-labelledby="postres">
+                <h2 id="postres">Postres</h2>
+                <div class="grid-recetas">
+                    {% for receta in postres %}
+                        {% include 'includes/receta_tarjeta.html' %}
+                    {% empty %}
+                        <p class="vacio">Aún no hay postres.</p>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <section class="recuadro" aria-labelledby="introduccion">
                 <h2 id="introduccion">Historia</h2>
                 <p>En el <strong>Mundo de Chiikawa</strong>, cada día es una aventura llena de desafíos. A veces toca trabajar duro recolectando hierbas o enfrentando criaturas misteriosas para obtener una "recompensa". Pero lo que hace que este mundo sea realmente especial no es solo el tesoro obtenido, sino lo que sucede después.</p>
                 <p>Para Chiikawa, Hachiware y Usagi, la comida no es solo sustento; es el lenguaje con el que celebran que están juntos. Ya sea compartiendo un tazón de ramen caliente tras una jornada agotadora, descubriendo una fuente mágica de pudding o preparando un pan de pizza en su pequeña cueva, cada bocado es un momento de alegría compartida.</p>
                 <p>En <strong>"Cocina con Hachiware"</strong>, creemos que las mejores recetas son las que se preparan con curiosidad y se disfrutan con amigos. Porque en este mundo, no hay problema tan grande que un postre esponjoso o un plato de pasta bien hecho no puedan hacer un poquito más ligero. ¡Acompáñanos a cocinar estos pequeños momentos de felicidad!</p>
-            </section>
-
-            <section aria-labelledby="recetas-saladas">
-                <h2 id="recetas-saladas">Recetas saladas</h2>
-                {% for receta in recetas_saladas %}
-                    {% include 'includes/receta.html' %}
-                {% endfor %}
-            </section>
-
-            <section aria-labelledby="postres">
-                <h2 id="postres">Postres</h2>
-                {% for receta in postres %}
-                    {% include 'includes/receta.html' %}
-                {% endfor %}
-
-                <div style="margin-top: 60px;">
-                    <h3 style="text-align: center; border-bottom: 2px dashed #ffb6c1; padding-bottom: 10px; color: white;">
-                        Nuevas Recetas Añadidas
-                    </h3>
-                    {% for receta in recetas_nuevas %}
-                        {% include 'includes/receta.html' %}
-                    {% empty %}
-                        <p style="text-align: center; width: 100%; color: #fff;">
-                            Aún no hay recetas nuevas.
-                        </p>
-                    {% endfor %}
-                </div>
             </section>
 {% endblock %}

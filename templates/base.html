@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% block titulo %}Mundo Chiikawa{% endblock %}</title>
+    <title>{% block titulo %}Cocina con Hachiware{% endblock %}</title>
 
 
     <link rel="icon" type="image/webp" href="{% static 'images/iconos/iconhachiware.webp' %}" />
@@ -17,30 +17,13 @@
 </head>
 <body>
     <div class="pagina-chiikawa">
-        <div class="burbuja burbuja-1"></div>
-        <div class="burbuja burbuja-2"></div>
-        <div class="burbuja burbuja-3"></div>
-        <div class="burbuja burbuja-4"></div>
-        <div class="burbuja burbuja-5"></div>
-
-        <header id="inicio" style="text-align: center;">
-            <div class="logo" style="margin-top: 20px;">
-                <img src="{% static 'images/iconos/iconhachiware.webp' %}" alt="Logo Chiikawa" style="width: 100px;" />
-                <h1>Mundo Chiikawa</h1>
-            </div>
-
-            <nav class="menu-principal">
+        <div class="barra-nav">
+            <nav class="menu-principal" aria-label="Menú principal">
                 <ul>
-                    <li><a href="{% url 'inicio' %}#introduccion">Historia</a></li>
-                    <li><a href="{% url 'inicio' %}#recetas-saladas">Recetas</a></li>
+                    <li><a href="{% url 'inicio' %}"{% if request.resolver_match.url_name == 'inicio' %} class="activo" aria-current="page"{% endif %}>Inicio</a></li>
                     <li><a href="{% url 'inicio' %}#postres">Postres</a></li>
-                    <li><a href="{% url 'catalogo' %}">Catálogo</a></li>
-                    <li><a href="{% url 'contacto' %}">Contacto</a></li>
-                    <li>
-                        <button style="background: none; border: none; color: #4980f8; font-weight: bold; cursor: pointer; font-size: 16px;">
-                            🛒 Carrito
-                        </button>
-                    </li>
+                    <li><a href="{% url 'tienda' %}"{% if request.resolver_match.url_name == 'tienda' %} class="activo" aria-current="page"{% endif %}>Tienda</a></li>
+                    <li><a href="{% url 'contacto' %}"{% if request.resolver_match.url_name == 'contacto' %} class="activo" aria-current="page"{% endif %}>Contacto</a></li>
                 </ul>
             </nav>
 
@@ -49,21 +32,24 @@
                     <span></span><span></span><span></span>
                 </button>
                 <div class="dropdown-menu">
-                    <div id="auth-links" style="display: flex; flex-direction: column;">
-                        {% if user.is_authenticated %}
-                            <span class="welcome-text">Hola, {{ user.username }}</span>
-                            <form method="post" action="{% url 'logout' %}">
-                                {% csrf_token %}
-                                <button type="submit">Cerrar Sesión</button>
-                            </form>
-                        {% else %}
-                            <a href="{% url 'login' %}">Iniciar Sesión</a>
-                            <a href="{% url 'registro' %}">Registrarse</a>
-                        {% endif %}
-                        <a href="{% url 'crear_producto' %}" class="btn btn-primary">Añadir Producto</a>
-                    </div>
+                    {% if user.is_authenticated %}
+                        <span class="welcome-text">Hola, {{ user.username }}</span>
+                        <form method="post" action="{% url 'logout' %}">
+                            {% csrf_token %}
+                            <button type="submit">Cerrar Sesión</button>
+                        </form>
+                    {% else %}
+                        <a href="{% url 'login' %}">Iniciar Sesión</a>
+                        <a href="{% url 'registro' %}">Regístrate</a>
+                    {% endif %}
+                    <button type="button">🛒 Carrito</button>
+                    <a href="{% url 'crear_producto' %}">Añadir Producto</a>
                 </div>
             </div>
+        </div>
+
+        <header id="inicio">
+            <h1>Cocina con Hachiware</h1>
 
             {% block carrusel %}{% endblock %}
         </header>

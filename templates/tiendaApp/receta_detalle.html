@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block titulo %}{{ receta.nombre }} · Cocina con Hachiware{% endblock %}
+
+{% block contenido %}
+<p><a class="volver" href="{% url 'inicio' %}{% if receta.tipo == 'p' %}#postres{% endif %}">← Volver a las recetas</a></p>
+<section class="recuadro{% if receta.tipo == 'p' %} recuadro-rosa{% endif %}">
+    {% include 'includes/receta.html' %}
+</section>
+{% endblock %}

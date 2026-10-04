@@ -8,6 +8,7 @@ import json
 
 from django.conf import settings
 from django.utils import timezone
+from django.utils.text import slugify
 
 
 def _usa_mysql():
@@ -35,8 +36,20 @@ def obtener_recetas():
     """Lista de recetas (dict) ordenadas por el campo 'orden'."""
     if _usa_mysql():
         from tiendaApp.models import Receta
-        return [receta.como_dict() for receta in Receta.objects.all()]
-    return sorted(_leer_json('recetas.json', []), key=lambda r: r['orden'])
+        recetas = [receta.como_dict() for receta in Receta.objects.all()]
+    else:
+        recetas = sorted(_leer_json('recetas.json', []), key=lambda r: r['orden'])
+    for receta in recetas:
+        receta['slug'] = slugify(receta['nombre'])  # para la URL de la receta completa
+    return recetas
+
+
+def obtener_receta(slug):
+    """Una receta por su slug (o None si no existe)."""
+    for receta in obtener_recetas():
+        if receta['slug'] == slug:
+            return receta
+    return None
 
 
 def obtener_carrusel(recetas=None):

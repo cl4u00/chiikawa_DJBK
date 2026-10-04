@@ -1,0 +1,13 @@
+{% load static %}
+<div class="tarjeta-receta">
+    {% if receta.nueva %}<span class="etiqueta-nueva">Nueva</span>{% endif %}
+    <img src="{% static receta.imagen %}" alt="{{ receta.alt }}" loading="lazy" />
+    <h3>{{ receta.nombre }}</h3>
+    <a class="btn-ver-mas" href="{% url 'receta_detalle' receta.slug %}">
+        Ver más
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 14a4 4 0 0 1 1-7.9 5 5 0 0 1 10 0A4 4 0 0 1 18 14v6H6z"></path>
+            <path d="M6 17h12"></path>
+        </svg>
+    </a>
+</div>

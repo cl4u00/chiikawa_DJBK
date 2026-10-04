@@ -1,6 +1,6 @@
 # Chiikawa_DJ
 
-Proyecto Django "Mundo Chiikawa": recetas, catálogo de productos, contacto, login y registro.
+Proyecto Django "Mundo Chiikawa": recetas, tienda de productos, contacto, login y registro.
 
 ## Estructura
 
@@ -9,7 +9,7 @@ Chiikawa_DJ/
 ├── manage.py
 ├── requirements.txt
 ├── chiikawadjango/     # configuración del proyecto (settings, urls, wsgi)
-├── tiendaApp/          # inicio, recetas, catálogo, productos, contacto
+├── tiendaApp/          # inicio, recetas, tienda, productos, contacto
 ├── cuentasApp/         # login, registro, logout
 ├── data/               # recetas.json, contactos.json
 ├── templates/          # base.html, includes/ y una carpeta por app
@@ -35,14 +35,15 @@ python manage.py runserver
   (pasa `data/recetas.json` y `data/contactos.json` a MySQL).
 
 Los usuarios, los productos y el admin usan siempre MySQL.
-Una receta marcada como **nueva** (en el admin o en el JSON) aparece en "Nuevas Recetas Añadidas".
+Una receta marcada como **nueva** (en el admin o en el JSON) aparece en su categoría (saladas o postres) con la etiqueta "Nueva".
 
 ## Páginas
 
 | Ruta | Descripción |
 |------|-------------|
-| `/` | Inicio: carrusel y recetas |
-| `/catalogo/` | Productos desde MySQL |
+| `/` | Inicio: carrusel y recetas (saladas y postres) |
+| `/receta/<slug>/` | Receta completa |
+| `/tienda/` | Productos desde MySQL (`/catalogo/` redirige aquí) |
 | `/contacto/` | Formulario de contacto |
 | `/crear-producto/` | Mantenedor de productos |
 | `/login/`, `/registro/`, `/logout/` | Cuentas |

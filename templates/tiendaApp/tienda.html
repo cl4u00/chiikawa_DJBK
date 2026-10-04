@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 
-{% block titulo %}Catálogo · Mundo Chiikawa{% endblock %}
+{% block titulo %}Tienda · Cocina con Hachiware{% endblock %}
 
 {% block contenido %}
-<section aria-labelledby="catalogo">
-    <h2 id="catalogo">Catálogo de productos</h2>
+<section class="recuadro" aria-labelledby="tienda">
+    <h2 id="tienda">Tienda</h2>
     <div class="grid-productos">
         {% for producto in productos %}
             {% include 'includes/producto.html' %}
         {% empty %}
-            <p style="text-align: center; width: 100%; color: #fff;">Aún no hay productos en el catálogo.</p>
+            <p class="vacio">Aún no hay productos en la tienda.</p>
         {% endfor %}
     </div>
     <p class="acciones"><a class="btn-chiikawa" href="{% url 'crear_producto' %}">Añadir producto</a></p>
